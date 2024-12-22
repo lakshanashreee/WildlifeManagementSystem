@@ -10,10 +10,10 @@
     <div class="container">
         <h1>Add Animal to Wildlife Database</h1>
 
-        <form id="animalForm" action="add_animal.php" method="POST">
+        <form id="animalForm" action="wildlife-data" method="POST">
             <div class="input-group">
                 <label for="name">Animal Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter animal name" required>
+                <input type="text" id="name" name="animalName" placeholder="Enter animal name" required>
             </div>
 
             <div class="input-group">
@@ -33,14 +33,11 @@
 
             <div class="input-group">
                 <label for="date_added">Date Added</label>
-                <input type="date" id="date_added" name="date_added" required>
+                <input type="date" id="date_added" name="dateAdded" required>
             </div>
 
             <button type="submit">Add Animal</button>
-            <div id="successMessage" class="hidden">Successfully added!</div>
         </form>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
