@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Wildlife Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="report-container">
+        <header>
+            <h1>Animal Population Reports</h1>
+            <p>Generate and view reports on wildlife populations and habitats.</p>
+        </header>
+
+        <section class="report-form">
+            <h2>Generate Report</h2>
+            <form id="reportForm" action="generate_report.php" method="POST">
+                <div class="input-group">
+                    <label for="dateFrom">Date From:</label>
+                    <input type="date" id="dateFrom" name="dateFrom" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="dateTo">Date To:</label>
+                    <input type="date" id="dateTo" name="dateTo" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="species">Species:</label>
+                    <select id="species" name="species">
+                        <option value="all">All Species</option>
+                        <option value="species1">Species 1</option>
+                        <option value="species2">Species 2</option>
+                        <option value="species3">Species 3</option>
+                        <!-- Add more species as needed -->
+                    </select>
+                </div>
+
+                <button type="submit">Generate Report</button>
+            </form>
+        </section>
+
+        <section class="report-results">
+            <h2>Report Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Animal Name</th>
+                        <th>Species</th>
+                        <th>Age</th>
+                        <th>Habitat</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample data, replace with dynamic data from your database -->
+                    <tr>
+                        <td>Lion</td>
+                        <td>Mammal</td>
+                        <td>5</td>
+                        <td>Savannah</td>
+                        <td>2024-01-15</td>
+                    </tr>
+                    <tr>
+                        <td>Elephant</td>
+                        <td>Mammal</td>
+                        <td>10</td>
+                        <td>Grassland</td>
+                        <td>2024-02-20</td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Wildlife Management System. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
