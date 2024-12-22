@@ -10,34 +10,37 @@
     <div class="container">
         <h1>Add Animal to Wildlife Database</h1>
 
-        <form id="animalForm" action="wildlife-data" method="POST">
-            <div class="input-group">
-                <label for="name">Animal Name</label>
-                <input type="text" id="name" name="animalName" placeholder="Enter animal name" required>
-            </div>
+        <!-- Updated form action to match servlet mapping -->
+        <form id="animalForm" action="addAnimalServlet" method="POST">
+    <div class="input-group">
+        <label for="animalName">Animal Name</label>
+        <input type="text" id="animalName" name="animalName" placeholder="Enter animal name" required>
+    </div>
 
-            <div class="input-group">
-                <label for="species">Species</label>
-                <input type="text" id="species" name="species" placeholder="Enter species" required>
-            </div>
+    <div class="input-group">
+        <label for="species">Species</label>
+        <input type="text" id="species" name="species" placeholder="Enter species" required>
+    </div>
 
-            <div class="input-group">
-                <label for="age">Age (in years)</label>
-                <input type="number" id="age" name="age" min="0" placeholder="Enter animal age" required>
-            </div>
+    <div class="input-group">
+        <label for="age">Age (in years)</label>
+        <input type="number" id="age" name="age" min="0" placeholder="Enter animal age" required>
+    </div>
 
-            <div class="input-group">
-                <label for="habitat">Habitat</label>
-                <input type="text" id="habitat" name="habitat" placeholder="Enter habitat" required>
-            </div>
+    <div class="input-group">
+        <label for="habitat">Habitat</label>
+        <input type="text" id="habitat" name="habitat" placeholder="Enter habitat" required>
+    </div>
 
-            <div class="input-group">
-                <label for="date_added">Date Added</label>
-                <input type="date" id="date_added" name="dateAdded" required>
-            </div>
+    <div class="input-group">
+        <label for="date_added">Date Added</label>
+        <input type="date" id="date_added" name="date_added" required>
+    </div>
 
-            <button type="submit">Add Animal</button>
-        </form>
+    <button type="submit">Add Animal</button>
+</form>
+
     </div>
 </body>
 </html>
+

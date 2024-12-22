@@ -5,17 +5,16 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import jakarta.servlet.ServletException; // For Tomcat 10
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/wildlife-data")
+@WebServlet("/addAnimalServlet") // This matches the pattern in web.xml
 public class WildlifeServer extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    // Handling POST request when adding animal details
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get the animal details from the request
         String animalName = request.getParameter("animalName");
@@ -33,6 +32,7 @@ public class WildlifeServer extends HttpServlet {
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
+
             // Set the values from the request parameters to the prepared statement
             stmt.setString(1, animalName);
             stmt.setString(2, species);
@@ -58,3 +58,5 @@ public class WildlifeServer extends HttpServlet {
         }
     }
 }
+
+
